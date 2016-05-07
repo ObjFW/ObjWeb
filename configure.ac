@@ -33,6 +33,8 @@ AS_IF([test x"$enable_shared" != x"no"], [
 	AC_SUBST(OBJWEB_SHARED_LIB, "${LIB_PREFIX}objweb${LIB_SUFFIX}")
 	AC_SUBST(EXCEPTIONS_LIB_A, "exceptions.lib.a")
 	AC_SUBST(EXCEPTIONS_EXCEPTIONS_LIB_A, "exceptions/exceptions.lib.a")
+], [
+	AC_SUBST(LIBOBJWEB_DEP, "../src/libobjweb.a")
 ])
 AC_ARG_ENABLE(static, AS_HELP_STRING([--enable-static], [build static library]))
 AS_IF([test x"$enable_static" = x"yes" -o x"$enable_shared" = x"no"], [
